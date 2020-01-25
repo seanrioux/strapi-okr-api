@@ -1,0 +1,30 @@
+{
+  "info": {
+    "name": "result",
+    "description": "Key results are quantitative goals towards an objective"
+  },
+  "connection": "default",
+  "collectionName": "groups_results",
+  "attributes": {
+    "direction": {
+      "enum": [
+        "increase",
+        "decrease",
+        "maintain"
+      ],
+      "type": "enumeration"
+    },
+    "metric": {
+      "model": "metric"
+    },
+    "start": {
+      "type": "float"
+    },
+    "goal": {
+      "type": "float"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

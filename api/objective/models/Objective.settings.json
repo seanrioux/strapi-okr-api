@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "objectives",
+  "info": {
+    "name": "objective",
+    "description": "Objectives are qualitative goals towards achieving an initiative and/or vision"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "objective": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "result": {
+      "group": "result",
+      "repeatable": true,
+      "type": "group"
+    },
+    "achieved": {
+      "type": "boolean",
+      "default": false
+    },
+    "team": {
+      "model": "team"
+    }
+  }
+}

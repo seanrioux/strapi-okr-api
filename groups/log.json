@@ -1,0 +1,16 @@
+{
+  "info": {
+    "name": "log",
+    "description": "Logs capture a current metric value for objective grading"
+  },
+  "connection": "default",
+  "collectionName": "groups_logs",
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "value": {
+      "type": "float"
+    }
+  }
+}

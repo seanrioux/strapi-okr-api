@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "teams",
+  "info": {
+    "name": "team",
+    "description": "Each objective is assigned a team or business unit that is responsible for driving results and achieving objectives."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "team": {
+      "type": "string"
+    }
+  }
+}

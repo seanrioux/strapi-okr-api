@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "metrics",
+  "info": {
+    "name": "metric",
+    "description": "Metrics are the quantitative measures used to define key results"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "metric": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "unit": {
+      "type": "string",
+      "required": true
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "placement": {
+      "enum": [
+        "before",
+        "after"
+      ],
+      "type": "enumeration"
+    },
+    "space": {
+      "type": "boolean",
+      "default": true
+    },
+    "log": {
+      "group": "log",
+      "repeatable": true,
+      "type": "group"
+    }
+  }
+}
