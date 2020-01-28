@@ -9,27 +9,29 @@ An open-source, API first, CMS solution for managing and integrating OKR into yo
 ## Introduction
 
 ### What is OKR?
-OKR (_objectives and key results_) is a powerful goal setting model popularized by [John Doerr](https://hbr.org/2018/05/how-vc-john-doerr-sets-and-achieves-goals) in his New York Time bestseller [Measure What Matters](https://www.whatmatters.com/).
+OKR (_objectives and key results_) is a powerful goal setting model popularized by [John Doerr](https://hbr.org/2018/05/how-vc-john-doerr-sets-and-achieves-goals) in his #1 New York Time bestsellers [Measure What Matters](https://www.whatmatters.com/).
 
 OKR defines simple rules for goal setting whereby:
 
-- **Objectives** are the _qualitative_ goals set towards a company vision or initiative to clarify meaning.
-- **Key Results** are the _quantitative_ measures used to determine the achievement of each objective.
+- **Objectives** are _qualitative_ goals towards a company vision or initiativex
+- **Key Results** are the _quantitative_ measures for achievement of objectives
 
-These simple yet powerful concepts, have helped propel organizations (like Google and the Gates Foundation, to name a couple) towards extraordinary, ambitious achievements.
+These simple yet powerful concepts have helped propel organizations (like Google and the Gates Foundation) towards extraordinary, ambitious achievements.
 
 ### What is OKR API?
-Many powerful software solutions exist for adopting OKR organizationally. While these solutions often offer excellent user experience and a glut of features, they are also often costly. And while some may offer APIs to enable integration with other related tools (project management, human resources, documentation management, etc.) none offer a fully self-hosted or open-source API solution, which might be used to bootstrap new or novel business management applications with OKR as an integral component.
+Many powerful [software solutions](https://okrsoftware.com/) exist for adopting OKR organizationally.
 
-OKR API is designed with the objective to better democratize this powerful model by offering a free-to-use (extend, and re-distribute) OKR management solution. Offered under an MIT license and built on the open-source Strapi CMS, OKR API can be used to build new, novel, OKR based solutions, or to integrate OKR with existing business management solutions of any kind.
+While many of these solutions often offer excellent user experience and a glut of features, they are also often costly. And while some may offer APIs to enable integration with other related tools (project management, human resources, documentation management, etc.) none offer a fully open, extensible, self-hosted OKR solution.
 
-#### Use case
+OKR API has been created with the objective to better democratize the OKR model by offering a free-to-use (extend, and re-distribute) OKR management solution. Offered under an MIT license and built on the open-source Strapi CMS, OKR API can be used to build new OKR based solutions, or to integrate OKR with existing business management solutions of any kind.
+
+#### Use cases
 OKR API provides an API first content management system to help managers and developers:
 - Create and manage objectives and key results
-- Integrate the model in new applications, or existing third-party solutions
-- Deploy their OKR management solution using the internal or cloud infrastructure they choose
+- Integrate the model in new applications (front-end or back-end), or existing third-party solutions
+- Deploy OKR management solutions using the internal or cloud infrastructure of choice
 
-#### Features
+#### Key features
 OKR API has everything you need to get started:
 - **Intuitive management interface** for creating and managing OKRs
 - Ready to use **RESTful (or GraphQL)** endpoints for OKR integration
@@ -42,7 +44,6 @@ Learn more about the powerful Strapi content management system behind OKR API [h
 Follow these step by step instructions to get started running OKR API in your local development environment:
 
 ### 1. Install
-First, we'll install the required dependencies:
 
 #### 1.1. Install Strapi
 First, install Strapi globally using npm.
