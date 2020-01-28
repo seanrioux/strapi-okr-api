@@ -1,65 +1,193 @@
-# OKRIA Strapi
-An open-source API solution for managing and integrating OKRs, initiatives and activities into your applications.
+# OKR API
+An open-source, API first, CMS solution for managing and integrating OKR into your applications.
+
+## Table of contents
+- [Introduction](#introduction)
+- [Getting started](#getting-started)
+- [Appendix](#appendix)
 
 ## Introduction
-OKRIA is a setting and strategic planning model designed to better the objectives and key results model popularized by John Doerr.
 
-### What is OKRIA?
-If you’re familiar with OKR, it’s pretty easy to summarize OKRIA (it’s in our name). OKRIA stands for Objectives and Key Results, Initiatives and Activities.
+### What is OKR?
+OKR (_objectives and key results_) is a powerful goal setting model popularized by [John Doerr](https://hbr.org/2018/05/how-vc-john-doerr-sets-and-achieves-goals) in his New York Time bestseller [Measure What Matters](https://www.whatmatters.com/).
 
-In the OKRIA model, we have explicitly delineated the often compounded process of planning initiatives and activities from that of setting objectives and key results. In doing so we have worked to define a more holistic strategic planning model. Following the OKR example, we’ve defined simple (but opinionated) rules for the application of the process, considering organizational hierarchy and scalability.
+OKR defines simple rules for goal setting whereby:
 
-Put simply, we’ve extended OKR to help connect the dots (and ensure a clear separation) between the goals companies set and the work teams do to achieve them.
+- **Objectives** are the _qualitative_ goals set towards a company vision or initiative to clarify meaning.
+- **Key Results** are the _quantitative_ measures used to determine the achievement of each objective.
 
-## Getting Started
-OKRIA is committed to offering free tools to help support adoption of the model. You can learn more about OKRIA [here](https://okria.io/). To help companies adopt the model in software application, We've created this open-source Strapi based OKR management solution.
+These simple yet powerful concepts, have helped propel organizations (like Google and the Gates Foundation, to name a couple) towards extraordinary, ambitious achievements.
 
-### Introducing OKRIA Strapi
-OKRIA Strapi provides an API first CMS to help product managers and developers:
-1. Create and manage objectives and key results
-2. Plan initiatives and activities
-3. Integrate objectives and initiatives with products
+### What is OKR API?
+Many powerful software solutions exist for adopting OKR organizationally. While these solutions often offer excellent user experience and a glut of features, they are also often costly. And while some may offer APIs to enable integration with other related tools (project management, human resources, documentation management, etc.) none offer a fully self-hosted or open-source API solution, which might be used to bootstrap new or novel business management applications with OKR as an integral component.
 
-### Features
-OKRIA Strapi has everything you need to get started:
-- CMS interface for managers
-- RESTful API for developers
-- User management, plugin architecture, and more...
+OKR API is designed with the objective to better democratize this powerful model by offering a free-to-use (extend, and re-distribute) OKR management solution. Offered under an MIT license and built on the open-source Strapi CMS, OKR API can be used to build new, novel, OKR based solutions, or to integrate OKR with existing business management solutions of any kind.
 
-Learn more about the powerful Strapi CMS [here](https://strapi.io/documentation/3.0.0-beta.x/getting-started/quick-start.html) for full documentation and features.
+#### Use case
+OKR API provides an API first content management system to help managers and developers:
+- Create and manage objectives and key results
+- Integrate the model in new applications, or existing third-party solutions
+- Deploy their OKR management solution using the internal or cloud infrastructure they choose
 
-## Quick Start Guide
-Getting started is easy.
+#### Features
+OKR API has everything you need to get started:
+- **Intuitive management interface** for creating and managing OKRs
+- Ready to use **RESTful (or GraphQL)** endpoints for OKR integration
+- **Self-hosted** with a range of instructions and database configuration for deployment
+- Robust authentication options, user management, extensibility, and more...
 
-Please make sure Node.js and npm are properly installed on your machine.
-https://strapi.io/documentation/3.0.0-alpha.x/getting-started/quick-start.html#_1-install-strapi-globally
+Learn more about the powerful Strapi content management system behind OKR API [here](https://strapi.io/documentation/3.0.0-beta.x/getting-started/quick-start.html) for full documentation and features.
+
+## Getting started
+Follow these step by step instructions to get started running OKR API in your local development environment:
+
+### 1. Install
+First, we'll install the required dependencies:
+
+#### 1.1. Install Strapi
+First, install Strapi globally using npm.
+```
+npm i strapi -g
+```
+#### 1.2 Install OKR API
+The OKR API repo contains a `package.json` file with additional application dependencies as well as Strapi configuration files specific to the OKR API.
+
+Clone the repo and install the dependencies as follows:
 
 ```
-npm install strapi@alpha -g
-```
-
-Install dependancies.
-```
+git clone git@github.com:okria/okr-strapi.git
+cd okr-strapi
 npm install
 ```
 
-Start a Strapi application with autoReload enabled.
-https://strapi.io/documentation/3.0.0-beta.x/cli/CLI.html#strapi-new
+**Note:** If you intend to use OKR API in production (and develop it further) you may wish to fork the repo instead.
+
+### 2. Run the application
+Strapi includes a cli and a user interface to be accessed in the browser.
+
+#### 2.1 Run in development
+To run Strapi and OKR API in development mode:
+
 ```
-yarn strapi develop
+strapi develop
 ```
 
-Access in browser
-http://localhost:1337
+**Note:** To review all commands enter `strapi`.
 
+### 2.2 Login as Administrator
+You will then be provided with a URL as follows to access the interface in the browser http://localhost:1337.
 
-Authentication
-1. Set user permissions to access objectives and initiatives endpoints
-2. Create authenticated user
-3. Get PWT token with POST request
-4. Access objectives and initiatives endpoints with token in header
+Visit this URL in the browser, and follow the provided link to navigate to http://localhost:1337/admin to create an administrative account and access the interface for the first time.
 
+### 3. Create and Manage
+Once you've logged in you will be presented with the Strapi interface. You'll find 3 content types that will allow you to create and manage organizational OKR. Let's walk through the complete process so you can see how the OKR API works:
 
-Testing with Postman
-1. POST http://localhost:1337/auth/local
-   1. BODY identifier, password
+#### 3.1 Create a team
+The first thing we will do is create a team or teams who will own OKRs. These could be business units, product teams, or any other organizational grouping to be associated with set objectives.
+
+1. Click `Teams` in the sidebar and click the `Add New Team` button
+2. Add an team name in the `Team` field
+   - e.g.  `executive`, `sales`, `marketing`, etc.
+3. Save your team by clicking the `Save` button
+6. You can now access this and other teams by clicking `Teams` in the sidebar
+
+#### 3.2 Create an objective
+Second, we'll create an objective:
+
+1. Click `Objectives` in the sidebar and click the `Add New Objective` button
+2. Add an objective name in the `Objective` field
+   - e.g.  `Release a more delightful onboarding experience`
+3. Set a goal date for the completion of this objective
+4. Select a previously created team using the `Team` field
+4. Objectives have `Results` (key results). Leave this field blank for now
+5. Save your objective by clicking the `Save` button
+6. You can now access this and other objectives by clicking `Objectives` in the sidebar
+
+#### 3.3 Create a metric
+Before creating a key result we'll want to identify the key metrics which we'll use to measure our objective. A key metric is a quantitative measure which teams will increase, decrease, or maintain through their activities and which will be used to measure achievement of our objective (as a key result).
+
+1. Click `Metrics` in the sidebar and click the `Add New Metric` button
+2. Add a metric name in the `Metric` field
+   - e.g. `customer onboarding support requests` or `customer onboarding completion rate`
+3. Add a unit in the `Unit` field
+   - i.e. the unit name used for the type of metric
+   - e.g. `count` or `percentage`
+4. As relevant, add a unit symbol in the `Symbol` field
+   - e.g. `$`, `%` or `kg`, etc.
+5. If a symbol has been identified, we can also configure positioning for the symbol:
+   1. Add a symbol `Position` i.e. `before` or `After`
+   2. Indicate if the symbol requires a space between the metric value i.e. `10 kg` or `23.4%`
+6. Once you have completed all the required fields, save the metric.
+7. You can now access the metric by clicking `Metrics` in the sidebar
+
+#### 3.4 Create key results
+Once an objective and one or many key metrics have been created you can begin to define key results. Key results allow you to define the quantitative evidence that an objective has been achieved.
+
+1. Click `Objectives` in the sidebar and navigate to edit your previously created objective
+2. Under `Result` click `Add new entry` to add a key result
+3. Select a `Direction` for your key metric
+   - e.g. `increase`, `decrease`, or `maintain`
+4. Select a `Metric` you created in the previous step
+5. Identify the `Start` value and a `Goal` value used to grade achievement
+6. Set a `Date` for the key result (considering the goal date of the objective)
+7. Add additional key metrics (typical 2-3) by clicking `Add new entry`
+8. Save the objective to save your key results
+
+### 4. API
+Now that you have created example team associated objectives and key results you will be able to interact with this content via a RESTful API. This will allow you to integrate the content in front-end or third-party applications.
+
+#### 4.1 Manage permissions
+In production, it will be important to ensure proper authentication of the API endpoint to ensure the security of critical data. While testing in our local environment, however, we'll use a public endpoint as a proof of concept.
+
+To configure access to the various endpoints, we'll use the administrative interface:
+
+1. In the sidebar click `Roles & Permissions`
+2. Navigate to `Public` to manage public user role access
+3. In the permissions section of the page, we'll activate the `find` permission for the resource endpoints we wish to access. In this case:
+   - Metric
+   - Objective
+   - Team
+4. Once the `find` permissions have been selected, click `Save`
+
+#### 5.1 Test endpoints
+We can now access endpoints for each of our content types in the browser or using an API tool (e.g. Postman) to consume the input content, via any front-end or third-party application.
+- Find all metrics via a `GET` request to `http://localhost:1337/metrics`
+- Find all objectives via a `GET` request to `http://localhost:1337/objectives`
+- Find all teams via a `GET` request to `http://localhost:1337/teams`
+
+## Appendix
+OKR API is new, but we will continue to enhance the offering with further customization to the Strapi interface, documentation, and use case example (including code). For now, please feel free to [reach out](http://localhost:4000/sales) with comments or questions and to browse the resources below to explore further.
+
+### Authentication
+To access the API securely, you'll want to set up authentication using one of the recommended authentication [methods](https://strapi.io/documentation/3.0.0-alpha.x/guides/authentication.html#authentication).
+
+The process is (at a high level) as follows:
+
+1. Navigate to the `Roles & Permissions` page and set authenticated user permissions.
+2. Create a user with the authenticated user role
+3. Retrieve PWT token with `POST` request passing user `identifier` and `password` to the `http://localhost:1337/auth/local` endpoint (note: parameters should be passed in the request body)
+4. Access content endpoints with token in header (bearer token)
+
+### Deployment and database
+Deploying Strapi to production can be achieved with a range of possible [hosting](https://strapi.io/documentation/3.0.0-alpha.x/guides/deployment.html) and [database](https://strapi.io/documentation/3.0.0-alpha.x/guides/databases.html) configurations.
+
+### Additional users and roles
+Before on-boarding product managers or other user roles to the OKR API, you should create a safe permission set that ensures users can create content, but not manage other administrative functions.
+
+We recommend creating a `manager` role, restricting access to the following permission categories:
+
+- **CONTENT-MANAGER**
+  - Contenttypes
+  - Generalsettings
+  - Groups
+- **CONTENT-TYPE-BUILDER**
+  - Contenttypebuilder
+  - Groups
+- **EMAIL**
+  - All
+- **USER-PERMISSIONS**
+  - User (all except `me`)
+  - Userpermissions (all except `init`)
+
+### Additional documentation
+- [Strapi documentation](https://strapi.io/documentation/3.0.0-beta.x/getting-started/introduction.html)
