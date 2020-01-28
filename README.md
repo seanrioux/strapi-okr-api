@@ -1,6 +1,8 @@
 # OKR API
 An open-source, API first, CMS solution for managing and integrating OKR into your applications.
 
+Created by [OKRIA](https://okria.io): we help organizations set goals and achieve them with our open source tools and coaching solutions designed to better the OKR practice.
+
 ## Table of contents
 - [Introduction](#introduction)
 - [Getting started](#getting-started)
