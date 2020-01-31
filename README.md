@@ -136,6 +136,16 @@ Once an objective and one or many key metrics have been created you can begin to
 7. Add additional key metrics (typical 2-3) by clicking `Add new entry`
 8. Save the objective to save your key results
 
+#### 3.5 Log metrics
+In order to grade our objectives our results need to be measured, and so we need to log metrics. The key metric content type allows you to add dated logs. These logs can be used to calculate the actual (or final) value of a key result (e.g. comparing the actual result to the goal result considering the start result, goal date, and log date).
+
+1. Click `Metric` in the sidebar to navigate to access your previous `Metric`
+2. Under `Log` click `Add new entry` to add a log
+3. Set the `Date` for the log (current date or date of measurement)
+4. In the `Value` field enter the current state value of the metric
+5. Multiple logs can be added to allow measurement for key results at different intervals
+6. Save the metric to save your logs
+
 ### 4. API
 Now that you have created example team associated objectives and key results you will be able to interact with this content via a RESTful API. This will allow you to integrate the content in front-end or third-party applications.
 
